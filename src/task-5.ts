@@ -1,10 +1,11 @@
-function printUserInfo(name: string, age: number, email?: string) {
-    console.log("Name:", name);
-    console.log("Age:", age);
-    if (email) {
-        console.log("Email:", email);
+function logStatus(status: "loading" | "success" | "error"): void {
+    if (status === "loading") {
+        console.log("Loading...");
+    } else if (status === "success") {
+        console.log("Success!");
+    } else if (status === "error") {
+        console.log("Something went wrong");
     }
 }
 
-printUserInfo("Alice", 30);
-printUserInfo("Bob", 25, "bob@mail.com");
+logStatus("loading");
